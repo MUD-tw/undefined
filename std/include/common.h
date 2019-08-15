@@ -1,6 +1,10 @@
 #ifndef ___COMMON_H___
 #define ___COMMON_H___
 
+//---------------------------------------------------------------------- daemon
+
+#define SAVE_D "/daemon/save"
+
 //--------------------------------------------------------------- miscellaneous
 
 #define NULL undefined_value()
