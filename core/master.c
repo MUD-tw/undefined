@@ -47,6 +47,20 @@ int valid_bind(object ob, object from, object to) {
 
 //-----------------------------------------------------------------------------
 
+int valid_seteuid(object target, string euid) {
+    if (euid) {
+        string uid = getuid(target);
+
+        if (uid != euid && uid != ROOT) {
+            return 0;
+        }
+    }
+
+    return 1;
+}
+
+//-----------------------------------------------------------------------------
+
 int valid_write(string file, mixed ob, string func) {
     string id = geteuid(ob);
 
@@ -71,6 +85,12 @@ int valid_write(string file, mixed ob, string func) {
 }
 
 //------------------------------------------------------------ private function
+
+private object connect() {
+    return new(CONNECTION);
+}
+
+//-----------------------------------------------------------------------------
 
 private void preload(string file) {
     load_object(file);
