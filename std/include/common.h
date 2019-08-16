@@ -3,8 +3,9 @@
 
 //---------------------------------------------------------------------- daemon
 
-#define SAVE_D "/daemon/save"
-#define USER_D "/daemon/user"
+#define COMMAND_D "/daemon/command"
+#define SAVE_D    "/daemon/save"
+#define USER_D    "/daemon/user"
 
 //--------------------------------------------------------------- miscellaneous
 
